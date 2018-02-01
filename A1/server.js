@@ -21,21 +21,21 @@ app.get("/sub", function (req, res) {
 	var a = parseFloat(req.query.a);
 	var b = parseFloat(req.query.b);
 	var result =  a - b;
-    res.send(req.query);
+    res.send(result.toString());
 });
 
 app.get("/mult", function (req, res) {
 	var a = parseFloat(req.query.a);
 	var b = parseFloat(req.query.b);
 	var result =  a * b;
-    res.send(req.query);
+    res.send(result.toString());
 });
 
 app.get("/div", function (req, res) {
 	var a = parseFloat(req.query.a);
 	var b = parseFloat(req.query.b);
 	var result =  a / b;
-    res.send(req.query);
+    res.send(result.toString());
 	
 });
 app.use(methodOverride());
