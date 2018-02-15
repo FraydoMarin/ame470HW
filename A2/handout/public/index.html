@@ -1,27 +1,21 @@
 <html>
 <head>
-  
   <script src='asyncReq.js'></script>
   <script src='jquery-3.3.1.min.js'></script>
   <script>
 function sendToServer(){
-
-      var url = "./eval?";
-      loadFile(url, function(resData){
-        $("result").val(resData);
-
-
-      
+  // complete this function.
+  //  you can use loadFile()
+// var url = "./eval?eq=" + encodeURIComponent($("#eq"));
+//var url = "./eval?eq=" + decodeURIComponent(encodeURIComponent($("#eq").val()));
 
 
-  
-    
-    });
-      document.getElementById("result").innerHTML = "Result is: " + resData;
-      
+var url = "./eval?eq=" + encodeURIComponent($("#eq").val());
 
-
-    }
+  loadFile(url,function(resData){
+  	$("#result").html(resData);
+  });
+}
   </script>
 
 </head>
@@ -30,6 +24,6 @@ function sendToServer(){
 	<h1> Eval </h1>
   <textarea id='eq'></textarea>
   <button onclick='sendToServer()'> Evaluate </button>
-  <div id='result'></div>
+  <div id='result'> </div>
 </body>
 </html>
