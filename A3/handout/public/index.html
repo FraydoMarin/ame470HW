@@ -39,7 +39,8 @@
         var thumb = entry.artworkUrl100;
         var name = entry.name;
         var artist = entry.artistName;
-        markup += "<button onclick='itemSelected(" + i + ")'><img src='" + thumb + "'><h1>" + name+ "</h1><h2>" + artist + "<h2></button>";
+        var collect = entry.collectionName;
+        markup += "<button onclick='itemSelected(" + i + ")'><img src='" + thumb + "'><h1>" + name+ "</h1><h2>" + artist + "<h2><h3>" + collect + "</3></button>";
       }
       $("#theList").html(markup);
     });
