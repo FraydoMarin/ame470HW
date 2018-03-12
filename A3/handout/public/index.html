@@ -55,8 +55,9 @@
   {
     var data = currRSSData[n];
     var markup = JSON.stringify(data);
+    markup += data.artistName + data.collectionName + data.name ;
       $("#theDetails").html(markup);
-    document.getElementById('theDetails').innerHTML = markup;
+
 
 
     document.getElementById("theDetails").style.color = "blue";
