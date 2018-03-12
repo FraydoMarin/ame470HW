@@ -54,9 +54,20 @@
 
   function itemSelected(n)
   {
-    var data = currRSSData[n];
-    var markup = JSON.stringify(data);
-    markup += data.artistName + data.collectionName + data.name ;
+    //var data = currRSSData[n];
+    //var markup = JSON.stringify(data);
+    //markup += data.artistName + data.collectionName + data.name ;
+
+   var markup = "";
+   var data = currRSSData[n];
+   var thumbDetailed = data.artworkUrl100;
+   var nameDetailed = data.name;
+	 var nameUrl = data.url;
+   var artistDetailed = data.artistName;
+	 var artistUrl = data.artistUrl;
+
+    markup += "<img src='" + thumbDetailed + "'><h1>" + nameDetailed + "</h1><h2>" + artistDetailed + "</h2>";
+
       $("#theDetails").html(markup);
 
 
