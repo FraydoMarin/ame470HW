@@ -55,7 +55,7 @@
   {
     var data = currRSSData[n];
     var markup = JSON.stringify(data);
-    markup += itemSelected(n).content;
+    markup += data.content;
     $("#theDetails").html(markup);
 
   }
