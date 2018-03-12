@@ -58,15 +58,16 @@
 
     //markup += data.artistName + data.collectionName + data.name ;
 
-   var markup = "";
+
    var data = currRSSData[n];
    var markup = JSON.stringify(data);
-   var nameDetailed = data.name;
-	 var nameUrl = data.url;
-   var artistDetailed = data.artistName;
+   markup += "";
+   var title = data.name;
+	 var Url = data.url;
+   var artistName = data.artistName;
 	 var artistUrl = data.artistUrl;
 
-    markup += "<h1>" + nameDetailed + "</h1><h2>" + artistDetailed + "</h2>";
+    markup += "<h1>" + title + "</h1><h2>" + artistName + "</h2>";
 
       $("#theDetails").html(markup);
 
