@@ -15,7 +15,7 @@
       float:right;
       width: calc(100% - 250px);
       min-height: 100%;
-      background: rgba(9, 132, 227,1.0);
+      background: rgba(190, 120, 100,1.0);
       font-family: helvetica;
     }
 
@@ -54,19 +54,19 @@
 
   function itemSelected(n)
   {
-    //var data = currRSSData[n];
+    
     //var markup = JSON.stringify(data);
     //markup += data.artistName + data.collectionName + data.name ;
 
    var markup = "";
    var data = currRSSData[n];
-   var thumbDetailed = data.artworkUrl100;
+
    var nameDetailed = data.name;
 	 var nameUrl = data.url;
    var artistDetailed = data.artistName;
 	 var artistUrl = data.artistUrl;
 
-    markup += "<img src='" + thumbDetailed + "'><h1>" + nameDetailed + "</h1><h2>" + artistDetailed + "</h2>";
+    markup += "<h1>" + nameDetailed + "</h1><h2>" + artistDetailed + "</h2>";
 
       $("#theDetails").html(markup);
 
