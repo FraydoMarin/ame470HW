@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <script src='asyncReq.js'></script>
@@ -8,20 +9,17 @@
       width: 250px;
       height: 100%;
       background: gray;
-    } 
+    }
     #theDetails{
       float:right;
       width: calc(100% - 250px);
       min-height: 100%;
       background: lightgray;
+      font-family: helvetica;
+
     }
 
-    #theList{
-      font-size-adjust: 12px;
-      font-family: arial;
-      text-orientation: left;
-      
-    }
+
   </style>
   <script>
   function getDataFromServer(){
@@ -53,11 +51,15 @@
     });
   }
 
+
   function itemSelected(n)
   {
     var data = currRSSData[n];
     var markup = JSON.stringify(data);
     $("#theDetails").html(markup);
+
+    markup +="<p>" + currRSSData[i].summary.entry + "</p>";
+    dcotument.getElementById("theDetails").innerHTML = markup;
   }
   </script>
 
