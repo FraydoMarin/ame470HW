@@ -55,8 +55,9 @@
   {
     var data = currRSSData[n];
     var markup = JSON.stringify(data);
+      $("#theDetails").html(markup);
     document.getElementById('theDetails').innerHTML = markup;
-    $("#theDetails").html(markup);
+
 
     document.getElementById("theDetails").style.color = "blue";
 
