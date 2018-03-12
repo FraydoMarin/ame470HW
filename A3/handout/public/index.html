@@ -55,11 +55,10 @@
   function itemSelected(n)
   {
     var data = currRSSData[n];
-    var markup = JSON.stringify(data);
+    var markup = JSON.parse(data);
     $("#theDetails").html(markup);
 
-    markup +="<p>" + currRSSData[i].summary.entry + "</p>";
-    dcotument.getElementById("theDetails").innerHTML = markup;
+
   }
   </script>
 
