@@ -15,7 +15,7 @@
       float:right;
       width: calc(100% - 250px);
       min-height: 100%;
-      background: rgba(190, 120, 100,1.0);
+      background: rgba(223, 230, 233,1.0);
       font-family: helvetica;
     }
 
@@ -54,13 +54,13 @@
 
   function itemSelected(n)
   {
-    
-    //var markup = JSON.stringify(data);
+
+
     //markup += data.artistName + data.collectionName + data.name ;
 
    var markup = "";
    var data = currRSSData[n];
-
+   var markup = JSON.stringify(data);
    var nameDetailed = data.name;
 	 var nameUrl = data.url;
    var artistDetailed = data.artistName;
@@ -72,7 +72,7 @@
 
 
 
-    document.getElementById("theDetails").style.color = "blue";
+    document.getElementById("theDetails").style.color = "white";
 
   }
   </script>
