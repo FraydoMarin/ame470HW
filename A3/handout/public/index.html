@@ -55,7 +55,7 @@
   {
     var data = currRSSData[n];
     var markup = JSON.stringify(data);
-    markup +=  data.artistName
+    markup +=  data.artistName + data.name + data.collectionName;
     $("#theDetails").html(markup);
 
   }
