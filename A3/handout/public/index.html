@@ -16,8 +16,6 @@
       min-height: 100%;
       background: rgba(9, 132, 227,1.0));
       font-family: helvetica;
-      
-
     }
 
 
@@ -57,9 +55,8 @@
   {
     var data = currRSSData[n];
     var markup = JSON.stringify(data);
-    markup += data.artistName;
+    markup += data(n).content;
     $("#theDetails").html(markup);
-
 
   }
   </script>
