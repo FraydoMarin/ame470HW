@@ -69,11 +69,17 @@
   {
         //var feedURL = newfile;
         //var url= feedURL;
-        //var feedURL = prompt("Enter your RSS feed URL:");
+    var feedURL = prompt("Enter your RSS feed URL or copy this link:https://rss.itunes.apple.com/api/v1/us/apple-music/hot-tracks/all/10/explicit.json");
         //var url = "./getFeedData?url=" + feedURL ;
-    var url = "./getFeedData?url=" +  (window.location.hash.replace("#",""));
+    var url = "./getFeedData?url=" +  feedURL;
+    //loadRSS(url);
     loadRSS(url);
-  
+
+  }
+
+  function start () {
+    var url = "./getFeedData=" + window.location.hash.replace("#","");
+    loadRSS(url);
   }
 
   function loadRSS(url){
@@ -112,8 +118,10 @@
 
 </head>
 
-<!--<body onload="changeRSSSrc()">-->
-<body>
+<body onload="start()">
+
+
+
 
 
 <div id='rssBox'>
